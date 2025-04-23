@@ -1,0 +1,100 @@
+/* Outer section */
+.testimonials-section {
+    background-color: #fafafa;
+    padding: 40px 135px 40px 150px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Main box wrapping all content */
+  .testimonial-box {
+    background: #f4fdfd;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 1200px;
+    width: 100%;
+    height: 558px;
+  }
+  
+  /* Heading */
+  .testimonial-box h2 {
+    width: 150px;
+    height: 30px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 5px 35px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: rgb(226, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  /* Subtitle */
+  .subtext {
+    font-size: 34px;
+    font-weight: 700;
+    /* margin: 0px 0px -18px; */
+    color: #000000;
+  }
+  
+  /* Cards layout */
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Each testimonial card */
+  .testimonial-card {
+    background-color: #f3e0e2;
+    padding: 30px 20px;
+    border-radius: 8px;
+    max-width: 293px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    text-align: center;
+    height: 370px;
+    top: 40px;
+  }
+  
+  /* Image styling */
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 0 4px #f7f7f7;
+  }
+  
+  /* Testimonial text */
+  .testimonial-text {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Name */
+  .testimonial-name {
+    color: #f78c00;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  /* Role */
+  .testimonial-role {
+    font-size: 13px;
+    color: #888;
+  }
+  

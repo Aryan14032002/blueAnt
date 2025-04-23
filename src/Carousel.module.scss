@@ -1,0 +1,42 @@
+:root {
+    --scrollbar-width: calc(100vw - 100%);
+}
+
+.carouselWrapper {
+    position: relative;
+}
+
+.carousel {
+    height: 100vh;
+}
+
+.slide {
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 30px;
+}
+
+.next {
+    right: 30px;
+}
+
+/* Style for the arrow images */
+.prev img,
+.next img {
+    width: 40px; /* Adjust the size of your arrow images */
+    height: auto;
+}

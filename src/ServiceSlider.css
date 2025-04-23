@@ -1,0 +1,175 @@
+.slider-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    height: 590px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 70px 150px;
+    align-items: center; /* Use center to center content */
+    background-color: #ffffff;
+    position: relative;
+}
+
+.service-label {
+    position: absolute;
+    top: 30px;
+    left: 30px; /* aligns with padding-left of .slider-wrapper */
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 5px 35px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: rgb(226, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    box-sizing: border-box;
+    z-index: 10;
+    width: 89px;
+    height: 30px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-color: #f4fdfd;
+    border-radius: 15px;
+    padding-top: -5px; /* add spacing for label */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.6s ease;
+    opacity: 0;
+    z-index: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.slide.center {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 3;
+    pointer-events: auto;
+    border: 4px solid #f3e0e2;
+    width: 700px;
+    height: 300px;
+}
+
+.slide.left {
+    opacity: 0.5;
+    transform: translateX(-320px) scale(0.9);
+    z-index: 2;
+    height: 280px;
+    left: 27%;
+    border: 4px solid #ccecf6;
+}
+
+.slide.right {
+    opacity: 0.5;
+    transform: translateX(320px) scale(0.9);
+    z-index: 2;
+    height: 280px;
+    right: 27%;
+    border: 4px solid #ccecf6;
+}
+
+.slide.hidden {
+    opacity: 0;
+    z-index: 0;
+    transform: scale(0.8);
+}
+
+.arrow {
+    
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    background: none; 
+}
+
+.arrow.left {
+    left: -60px;
+    margin-top: 0px;
+}
+
+.arrow.right {
+    right: -60px;
+    margin-top: 0px;
+}
+
+/* Remove or comment out the hover effect */
+.arrow:hover {
+    background-color: #ffffff;
+}
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+    .carousel {
+        width: 90%;
+        height: 400px;
+    }
+
+    .slide {
+        width: 100%;
+        height: 400px;
+    }
+
+    .slide.left,
+    .slide.right {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        width: 100%;
+        height: 250px;
+    }
+
+    .slide {
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+    }
+
+    .arrow {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .service-label {
+        font-size: 22px;
+        padding: 10px 20px;
+        top: 10px;
+        left: 20px;
+    }
+}

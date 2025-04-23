@@ -1,0 +1,216 @@
+/* Overall container */
+.mobile-strip {
+  width: 100%;
+  height: 250px;
+  background-color: #ed3237; /* Change to light blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 40px 0px 40px 0px;
+}
+
+/* Left part: text and buttons */
+/* Main Text Container */
+.mobile-text {
+  width: 60%;
+  padding: 20px;
+  transform: translateZ(0); /* Prevent layout shift on sibling hover */
+}
+
+/* Main Headline Styling */
+.mobile-text h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-left: 80px;
+  margin-bottom: 10px;
+  position: relative;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  width: fit-content;
+}
+
+/* Tagline Styling (Subtext below h2) */
+.tagline-subtext {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  opacity: 0.9;
+  padding-left: 10px;
+}
+
+/* Hover effect on the main title (no change for tagline) */
+.mobile-text h2:hover {
+  transform: translateX(3px);
+  color: #00afef; /* Change color on hover */
+  /* text-shadow: 0 0 12px #00afef, 0 0 20px #00afef;  */
+}
+
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn.black,
+.btn.blacks {
+  background-color: #00afef;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 11px 16px;
+  border: 1.5px solid transparent; /* Reserve space for border */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn.black {
+  margin-left: 80px;
+}
+.btn.blacks {
+  margin-left: 25px;
+}
+
+.btn.black img,
+.btn.blacks img {
+  height: 24px;
+  filter: invert(1);
+  padding-bottom: 1px;
+}
+
+/* Hover effect on buttons */
+.btn.black:hover,
+.btn.blacks:hover {
+  transform: translateY(-5px);
+  background-color: #ed3237;
+  border-color: white; /* Just change the color */
+}
+
+/* Right part: solid color block */
+.right-part {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: inset(0 0 45px 0);
+}
+
+.color-block {
+  height: 340px;
+  width: 60%;
+  background-image: url('/mobile app png.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.7));
+
+  position: relative;
+  right: -4px;
+  
+  animation: levitate 3s ease-in-out infinite; /* Levitation animation */
+}
+
+/* Keyframes for levitation effect */
+@keyframes levitate {
+  0% {
+    transform: translateY(0); /* Start position */
+  }
+  50% {
+    transform: translateY(5px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to the starting position */
+  }
+}
+
+
+/* Floating Bubbles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+  animation: floatUp 10s infinite ease-in-out;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Bubbles */
+.bubble1 {
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  left: 80px;
+  animation-delay: 0s;
+}
+.bubble2 {
+  width: 20px;
+  height: 20px;
+  top: 100px;
+  left: 660px;
+  animation-delay: 2s;
+}
+.bubble3 {
+  width: 25px;
+  height: 25px;
+  top: 150px;
+  left: 320px;
+  animation-delay: 0.4s;
+}
+.bubble4 {
+  width: 15px;
+  height: 15px;
+  top: 50px;
+  left: 500px;
+  animation-delay: 0.1s;
+}
+.bubble5 {
+  width: 35px;
+  height: 35px;
+  top: 200px;
+  right: 450px;
+  animation-delay: 0.1s;
+}
+.bubble6 {
+  width: 35px;
+  height: 35px;
+  top: 80px;
+  right: 50px;
+  animation-delay: 0.1s;
+}
+
+/* Icon alignment in button */
+.icon-left {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+.download-buttons a {
+  text-decoration: none;
+}
+.download-buttons a button {
+  text-decoration: none;
+}

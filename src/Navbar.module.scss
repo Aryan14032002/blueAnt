@@ -1,0 +1,227 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 12vh;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  background-color: #f4f0f0;
+  opacity: 0.7;
+
+  .logo {
+    height: 60%;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: auto;
+      z-index: 999;
+    }
+
+    .blob {
+      top: -16vh;
+      z-index: -3;
+      scale: 11;
+      left: 3vw;
+    }
+  }
+
+  .menuWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .contactIcons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-right: 15px;
+
+      .iconLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 20%;
+        transition: transform 0.2s, background-color 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        svg {
+          font-size: 18px;
+        }
+
+        .iconImage {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .menuContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .menuButton {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0px 16px;
+        background: none;
+        border: none;
+        color: #ed3237;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .menuText {
+          order: 1;
+        }
+
+        .menuIcon {
+          order: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 12px;
+          width: 15px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+
+          span {
+            height: 2px;
+            width: 100%;
+            background-color: #ed3237;
+            border-radius: 1px;
+          }
+        }
+      }
+
+      .dropdown {
+        position: absolute;
+        right: 0;
+        top: calc(100% - 10px);
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style: none;
+        min-width: 150px;
+        opacity: 0;
+        transform: translateX(50px);
+
+        background-color: rgb(255, 255, 255);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+        li {
+          opacity: 0;
+          transform: translateX(30px);
+          color: #000000;
+          cursor: pointer;
+          animation: none;
+          text-align: right;
+          transition: background-color 0.2s;
+          background-color: rgba(255, 255, 255, 0.7);
+          margin: 8px;
+          padding: 4px 8px;
+          margin-right: 15px;
+          border-radius: 6px;
+
+          &:hover {
+            color: #ed3237;
+            background-color: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+
+      &:hover .dropdown {
+        display: flex;
+        animation: dropdownSlideIn 0.3s forwards ease-out;
+
+        li {
+          animation: slideIn 0.3s forwards;
+        }
+
+        li:nth-child(1) {
+          animation-delay: 0.15s;
+        }
+
+        li:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+
+        li:nth-child(3) {
+          animation-delay: 0.25s;
+        }
+
+        li:nth-child(4) {
+          animation-delay: 0.3s;
+        }
+
+        li:nth-child(5) {
+          animation-delay: 0.35s;
+        }
+
+        li:nth-child(6) {
+          animation-delay: 0.4s;
+        }
+
+        li:nth-child(7) {
+          animation-delay: 0.45s;
+        }
+
+        li:nth-child(8) {
+          animation-delay: 0.5s;
+        }
+
+        li:nth-child(9) {
+          animation-delay: 0.55s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes dropdownSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
