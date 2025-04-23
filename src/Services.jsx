@@ -2,14 +2,14 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const services = [
-  { name: "Will and Legacy", desc: "Helps plan distribution of assets after life.", img: "will.jpeg" },
-  { name: "Loan", desc: "Provides financial aid for personal or business use.", img: "loan.jpeg" },
-  { name: "Taxes", desc: "Taxes fund government services like education, roads, and defense.", img: "tax.jpeg" },
-  { name: "Retirement", desc: "Helps plan and secure your post-retirement life.", img: "download.jpeg" },
-  { name: "Future Plans", desc: "Secure your future with planned investments.", img: "future.jpeg" },
-  { name: "Kid's Needs", desc: "Plan for your child's education and future.", img: "kids.jpeg" },
-  { name: "Budgeting", desc: "Control your expenses with personalized budgeting.", img: "budget.jpeg" },
-  { name: "Insurance", desc: "Protects against financial loss or risk.", img: "insaurance.jpeg" },
+  { name: "Will and Legacy", desc: "Helps plan distribution of assets after life.", img: "/will.jpeg" },
+  { name: "Loan", desc: "Provides financial aid for personal or business use.", img: "/loan.jpeg" },
+  { name: "Taxes", desc: "Taxes fund government services like education, roads, and defense.", img: "/tax.jpeg" },
+  { name: "Retirement", desc: "Helps plan and secure your post-retirement life.", img: "/download.jpeg" },
+  { name: "Future Plans", desc: "Secure your future with planned investments.", img: "/future.jpeg" },
+  { name: "Kid's Needs", desc: "Plan for your child's education and future.", img: "/kids.jpeg" },
+  { name: "Budgeting", desc: "Control your expenses with personalized budgeting.", img: "/budget.jpeg" },
+  { name: "Insurance", desc: "Protects against financial loss or risk.", img: "/insaurance.jpeg" },
 ];
 
 function Services() {
