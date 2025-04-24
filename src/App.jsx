@@ -10,6 +10,7 @@ import Blog from "./blog";
 import Gallery from "./gllery";
 import Mobile from "./mobile";
 import Testimonials from "./Testimonials"; 
+import ImpactStories from "./ImpactStories";
 // import Calculator from "./Calculator"; 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Gallery />
       <Mobile />
       <Testimonials />
+      <ImpactStories />
       {/* <Calculator /> */}
       {/* <Footer /> */}
       {/* </Router> */}

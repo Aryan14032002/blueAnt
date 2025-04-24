@@ -2,12 +2,12 @@ import React from "react";
 import "./gallery.css";
 
 const images = [
-  "public/workshop-4.jpg",  // Big
-  "public/workshop-6.jpg",  // Medium
-  "public/workshop-7.jpg",  // Small
-  "public/workshop-11.jpg", // Small
-  "public/workshop-18.jpg", // Medium
-  "public/workshop-19.jpg", // Big
+  "workshop-4.jpg",  // Big
+  "workshop-6.jpg",  // Medium
+  "workshop-7.jpg",  // Small
+  "workshop-11.jpg", // Small
+  "workshop-18.jpg", // Medium
+  "workshop-19.jpg", // Big
 ];
 
 const captions = [

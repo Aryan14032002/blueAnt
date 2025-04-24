@@ -19,10 +19,10 @@ const BlogSection = () => {
           </button>
           <div className="arrow-buttons">
           <button className="arrow-btn">
-          <img src="public/left-arrow.png" alt="Left Arrow" />
+          <img src="left-arrow.png" alt="Left Arrow" />
           </button>
           <button className="arrow-btn">
-          <img src="public/right-arrow.png" alt="Left Arrow" />
+          <img src="right-arrow.png" alt="Left Arrow" />
           </button>
           </div>
         </div>
