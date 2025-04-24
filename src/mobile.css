@@ -117,7 +117,7 @@
   position: relative;
   right: -4px;
   
-  animation: levitate 3s ease-in-out infinite; /* Levitation animation */
+  animation: levitate 5s ease-in-out infinite; /* Levitation animation */
 }
 
 /* Keyframes for levitation effect */
@@ -126,7 +126,7 @@
     transform: translateY(0); /* Start position */
   }
   50% {
-    transform: translateY(5px); /* Move up */
+    transform: translateY(30px); /* Move up */
   }
   100% {
     transform: translateY(0); /* Return to the starting position */

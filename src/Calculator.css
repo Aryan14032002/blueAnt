@@ -1,4 +1,4 @@
-.title {
+/* .title {
     border-radius: 13px;
     background-color: red;
     width: max-content;
@@ -163,17 +163,10 @@
     width: fit-content;
     margin: 0 auto;
 }
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Swipe gestures for mobile */
 .touch-start {
     transition: none;
 }
 
-/* Tablet and larger screens */
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
@@ -204,8 +197,6 @@
         right: -50px;
     }
 }
-
-/* Desktop screens */
 @media (min-width: 992px) {
     .wheel-wrapper {
         height: 400px;
@@ -228,4 +219,4 @@
     .details p {
         font-size: 1rem;
     }
-}
+} */

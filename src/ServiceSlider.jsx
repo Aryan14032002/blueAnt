@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./ServiceSlider.css";
 
 const images = [
-  "public/retirement.jpg",
-  "public/Taxes.jpg",
-  "public/willandlegacy.jpg",
-  "public/budget.jpg",
+  "retirement.jpg",
+  "Taxes.jpg",
+  "willandlegacy.jpg",
+  "budget.jpg",
   "slide5.jpg",
   "slide6.jpg",
   "slide7.jpg",
@@ -42,7 +42,7 @@ const ServiceSlider = () => {
       <div className="slider">
         <div className="service-label">SERVICE</div>
         <button className="arrow left" onClick={prevSlide}>
-          <img src="public/arrow-right arrow.png" alt="Previous" />
+          <img src="arrow-right arrow.png" alt="Previous" />
         </button>
         <div className="carousel">
           {images.map((src, i) => (
@@ -50,7 +50,7 @@ const ServiceSlider = () => {
           ))}
         </div>
         <button className="arrow right" onClick={nextSlide}>
-          <img src="public/arrow-left arrow.png" alt="Next" />
+          <img src="arrow-left arrow.png" alt="Next" />
         </button>
       </div>
     </div>

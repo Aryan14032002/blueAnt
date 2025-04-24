@@ -15,7 +15,7 @@
   left: 0;
   width: 65%;
   height: 100%;
-  background: linear-gradient(to left, #00afef, #0095c9);
+  background: linear-gradient(to left, #00afef, #ed3237);
   z-index: 1;
 }
 
@@ -113,7 +113,6 @@
 
 .blog-btn:hover {
   background-color: #00afef;
-  transform: scale(1.1);
 }
 
 .arrow-buttons {
@@ -123,8 +122,8 @@
 }
 
 .arrow-btn {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: #dce1f3;
   color: rgb(0, 0, 0);
   font-size: 18px;
@@ -139,8 +138,7 @@
 }
 
 .arrow-btn:hover {
-  background-color: #1d4ed8;
-  transform: scale(1.2);
+  background-color: #00afef;
 }
 
 .arrow-btn:active {
@@ -148,8 +146,8 @@
 }
 
 .arrow-btn img {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
   object-fit: contain;
   transition: transform 0.3s ease;
 }

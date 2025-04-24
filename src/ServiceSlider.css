@@ -127,9 +127,6 @@
 }
 
 /* Remove or comment out the hover effect */
-.arrow:hover {
-    background-color: #ffffff;
-}
 /* 📱 Responsive */
 @media (max-width: 1024px) {
     .carousel {

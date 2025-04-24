@@ -46,7 +46,7 @@
   }
     
   .view-all-btn:hover {
-    color: #c62828;
+    background-color: #00afef;
   }
   
   .view-all-btn::after {

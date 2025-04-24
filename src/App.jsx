@@ -4,12 +4,13 @@ import Navbar from "./Navbar";
 import Carousel from "./Carousel";
 import About from "./About";
 import Stats from "./stats";
-// import Services from "./Services";
+
 import ServiceSlider from "./ServiceSlider";
 import Blog from "./blog";
 import Gallery from "./gllery";
 import Mobile from "./mobile";
-import Testimonials from "./Testimonials";  
+import Testimonials from "./Testimonials"; 
+// import Calculator from "./Calculator"; 
 
 function App() {
   return (
@@ -19,12 +20,12 @@ function App() {
       <Carousel />
       <About />
       <Stats />
-      {/* <Services /> */}
       <ServiceSlider />
       <Blog />
       <Gallery />
       <Mobile />
       <Testimonials />
+      {/* <Calculator /> */}
       {/* <Footer /> */}
       {/* </Router> */}
     </>
