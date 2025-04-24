@@ -17,7 +17,27 @@ const stories = [
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
         image: 'slide2.jpg'
     },
-    // Add more stories as needed
+    {
+        id: 2,
+        name: 'Siddharth Suman',
+        title: 'OWNER',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
+        image: 'slide2.jpg'
+    },
+    {
+        id: 2,
+        name: 'Siddharth Suman',
+        title: 'OWNER',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
+        image: 'slide2.jpg'
+    },
+    {
+        id: 2,
+        name: 'Siddharth Suman',
+        title: 'OWNER',
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
+        image: 'slide2.jpg'
+    },
 ];
 
 const ImpactStories = () => {
@@ -26,7 +46,7 @@ const ImpactStories = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActive((prev) => (prev + 1) % stories.length);
-        },2000);
+        }, 2000);
         return () => clearInterval(interval);
     }, []);
 
@@ -55,10 +75,15 @@ const ImpactStories = () => {
                         transition={{ duration: 0.5 }}
                         className="story"
                     >
-                        <img src={stories[active].image} alt="Profile" className="profile-img" />
-                        <p className="story-text">{stories[active].quote}</p>
-                        <h3>{stories[active].name}</h3>
-                        <p className="title">{stories[active].title}</p>
+                        <div className="story-left">
+                            <img src={stories[active].image} alt="Profile" className="profile-img" />
+                            <div className="vertical-line"></div>
+                        </div>
+                        <div className="story-right">
+                            <p className="story-text">{stories[active].quote}</p>
+                            <h3>{stories[active].name}</h3>
+                            <p className="title">{stories[active].title}</p>
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>

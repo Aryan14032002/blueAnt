@@ -74,19 +74,81 @@
     justify-content: center;
     padding: 24px;
     text-align: center;
+    overflow: hidden;
+}
+
+.story {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.story-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40%;
 }
 
 .profile-img {
-    width: 96px;
-    height: 96px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 16px;
+    z-index: 1;
+    position: relative;
+    box-shadow: -1px 5px 10px 2px #00000069;
+}
+
+
+.story-left::before {
+
+    content: "";
+    height: 400px;
+    width: 2px;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+}
+
+.story-left::after {
+    content: "";
+    height: 200px;
+    width: 200px;
+    background-color: #dab995;
+    position: absolute;
+    z-index: 0;
+    bottom: -29px;
+    border-radius: 50%;
+}
+
+.vertical-line {
+    position: absolute;
+    right: -12px;
+    height: 100px;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.story-right {
+    width: 60%;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .story-text {
     font-size: 14px;
     margin-bottom: 12px;
+    color: #333;
 }
 
 .title {
