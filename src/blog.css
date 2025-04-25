@@ -162,7 +162,7 @@
   bottom: 47px;
   width: 55%;
   height: 85%;
-  background-image: url(public/blog2.jpg);
+  background-image: url(/blog2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

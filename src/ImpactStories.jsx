@@ -8,56 +8,56 @@ const stories = [
         name: 'Sneha Jain',
         title: 'TEAM LEADER',
         quote: 'Pete Graham is among the outstanding members of my team. He can work under pressure and easily adapt to change. I hope he grows and continues to thrive in his new endeavor.',
-        image: 'public/WhatsApp Image 2025-04-24 at 11.27.31_fad931d2.jpg'
+        image: '/WhatsApp Image 2025-04-24 at 11.27.31_fad931d2.jpg'
     },
     {
         id: 2,
         name: 'Rohit Sharma',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/WhatsApp Image 2025-04-24 at 11.26.04_f45f0754.jpg'
+        image: '/WhatsApp Image 2025-04-24 at 11.26.04_f45f0754.jpg'
     },
     {
         id: 3,
         name: 'Siddharth Suman',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/WhatsApp Image 2025-04-24 at 11.27.02_05e5e7cc.jpg'
+        image: '/WhatsApp Image 2025-04-24 at 11.27.02_05e5e7cc.jpg'
     },
     {
         id: 4,
         name: 'Gautam Singhania',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/Leonardo_Phoenix_10_a_confident_smiling_male_with_bright_warm_0.jpg'
+        image: '/Leonardo_Phoenix_10_a_confident_smiling_male_with_bright_warm_0.jpg'
     },
     {
         id: 5,
         name: 'Neha Gupta',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
+        image: '/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
     },
     {
         id: 6,
         name: 'Neha Gupta',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
+        image: '/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
     },
     {
         id: 7,
         name: 'Neha Gupta',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
+        image: '/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
     },
     {
         id: 8,
         name: 'Neha Gupta',
         title: 'OWNER',
         quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem dolorem delectus dolores ullam iste perferendis omnis fugiat asperiores voluptate doloribus dolorum autem ut maxime, reiciendis quis neque maiores ab!',
-        image: 'public/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
+        image: '/Leonardo_Phoenix_10_a_smiling_confident_woman_in_her_40s_with_2.jpg'
     },
 ];
 
