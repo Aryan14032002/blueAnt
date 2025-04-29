@@ -37,7 +37,7 @@ function Carousel() {
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.slide}>
-            <img src="slide4.jpg" alt="Slide 4" />
+            <img src="/slider1.jpg" alt="Slide 4" />
           </div>
         </SwiperSlide>
       </Swiper>

@@ -7,10 +7,14 @@ import Stats from "./stats";
 
 import ServiceSlider from "./ServiceSlider";
 import Blog from "./blog";
-import Gallery from "./gllery";
+import Calculator from "./Calculator";
 import Mobile from "./mobile";
+import Gallery from "./gllery";
+import Youtube from "./youtube";
 import ImpactStories from "./ImpactStories";
 // import Calculator from "./Calculator"; 
+
+import Footer from "./footer";
 
 function App() {
   return (
@@ -22,11 +26,14 @@ function App() {
       <Stats />
       <ServiceSlider />
       <Blog />
-      <Gallery />
+      <Calculator />
       <Mobile />
+      <Gallery />
+      <Youtube />
       <ImpactStories />
-      {/* <Calculator /> */}
       {/* <Footer /> */}
+      {/* <Calculator /> */}
+      <Footer />
       {/* </Router> */}
     </>
   );
