@@ -1,9 +1,9 @@
-/* Container Layout */
+/* Overall Container */
 .container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 70px 135px 70px 150px ;
+    padding: 70px 135px 70px 150px;
     background-color: #ffffff;
     min-height: 100vh;
   }
@@ -15,13 +15,14 @@
     }
   }
   
-  /* Calculator Left Section */
+  /* Left Calculator Section */
   .calculator {
     background-color: #fff5f5;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     flex: 2;
+    height: 650px;
   }
   
   .calculator h2 {
@@ -30,15 +31,31 @@
     margin-bottom: 1.5rem;
   }
   
-  /* Input Group */
-  .input-group input {
+  /* Top Section: Inputs + Chart Side-by-Side */
+  .top-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  /* Inputs Column */
+  .inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputs input {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    font-weight: 500;
+    border: none;
     border-radius: 0.5rem;
-    background-color: #f2f2f2;
+    background-color: #f2eeed;
+    color: #444;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
   }
   
   /* Calculate Button */
@@ -52,43 +69,39 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 0.5rem;
+    width: fit-content;
   }
   
   .button:hover {
-    background-color: #d32f2f;
+    background-color: #c62828;
   }
   
-  /* Results Section */
-  .results {
-    margin-top: 2rem;
-  }
-  
-  .flex-row {
+  /* Chart Block */
+  .chart-block {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
   }
   
-  .chart-placeholder {
-    width: 160px;
-    height: 160px;
-    background-color: #cce5ff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
+  /* Result Summary */
+  .sip-summary {
+    text-align: center;
+    margin: 20px 0 20px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
   }
   
   .result-value {
-    font-size: 1.5rem;
+    display: block;
+    font-size: 1.6rem;
     font-weight: bold;
+    color: #000;
     margin-top: 0.5rem;
   }
   
-  /* Info Boxes */
+  /* Info Boxes Row */
   .info-boxes {
     display: flex;
     gap: 1rem;
@@ -114,20 +127,21 @@
   }
   
   .info-value {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 0.25rem;
   }
   
+  /* Final Line */
   .text-center {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 20px;
   }
   
   .bold {
     font-weight: bold;
   }
   
-  /* Lumpsum Cards */
+  /* Right Section: Cards */
   .lumpsum-section {
     flex: 1;
     display: flex;
@@ -143,7 +157,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 165px;
+    height: 157px;
   }
   
   .card h4 {
@@ -176,3 +190,56 @@
     font-size: 2rem;
     color: #e53935;
   }
+  .legend {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #333;
+  }
+  
+  .legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .legend-color.red {
+    background-color: #e53935;
+  }
+  
+  .legend-color.blue {
+    background-color: #42a5f5;
+  }
+  .sip-summary {
+    font-size: 16px;
+    line-height: 1.8; /* Increased line spacing */
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .result-value {
+    font-size: 22px;     /* Bigger font */
+    font-weight: bold;   /* Bold */
+    color: #2e7d32;      /* Optional: green to highlight */
+    margin-top: 0px;
+  }
+  .text-center {
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  
+  .bold.highlight {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e7d32; /* Optional green shade for emphasis */
+  }
+  

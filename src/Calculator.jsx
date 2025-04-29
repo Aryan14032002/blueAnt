@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Calculator.css";
-import { PieChart, Pie, Cell, Legend } from "recharts";
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 export default function Calculator() {
   const [monthly, setMonthly] = useState("1000");
   const [rate, setRate] = useState("12");
-  const [years, setYears] = useState("30");
+  const [years, setYears] = useState("10");
   const [futureValue, setFutureValue] = useState(null);
 
   const calculateSIP = () => {
@@ -20,7 +20,7 @@ export default function Calculator() {
   };
 
   useEffect(() => {
-    calculateSIP(); // Automatically calculate on page load
+    calculateSIP();
   }, []);
 
   const totalInvested = monthly * 12 * years;
@@ -31,63 +31,79 @@ export default function Calculator() {
     { name: "Returns", value: wealthGained }
   ];
 
-  const COLORS = ["#ff8a80", "#82ca9d"];
+  const COLORS = ["#ed3237", "#00afef"];
 
   return (
     <div className="container">
+      {/* LEFT SECTION */}
       <div className="calculator">
         <h2>SIP Calculator</h2>
 
-        <div className="input-group">
-          <input
-            type="number"
-            placeholder="Monthly Investment"
-            value={monthly}
-            onChange={e => setMonthly(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Rate of Return (%)"
-            value={rate}
-            onChange={e => setRate(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Investment Period (Years)"
-            value={years}
-            onChange={e => setYears(e.target.value)}
-          />
-        </div>
+        <div className="top-section">
+          <div className="inputs">
+            <input
+              type="number"
+              placeholder="Monthly Investment"
+              value={monthly}
+              onChange={e => setMonthly(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Rate of Return (%)"
+              value={rate}
+              onChange={e => setRate(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Investment Period (Years)"
+              value={years}
+              onChange={e => setYears(e.target.value)}
+            />
 
-        <button className="button" onClick={calculateSIP}>
-          CALCULATE
-        </button>
+            <button className="button" onClick={calculateSIP}>
+              CALCULATE
+            </button>
+          </div>
 
-        {futureValue && (
-          <div className="results">
-            <div className="flex-row">
+          {futureValue && (
+            <div className="chart-block">
               <PieChart width={160} height={160}>
                 <Pie
                   data={data}
                   dataKey="value"
-                  innerRadius={50}
-                  outerRadius={70}
-                  paddingAngle={5}
-                  label
+                  innerRadius={45}
+                  outerRadius={80}
+                  paddingAngle={1}
                 >
                   {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
                   ))}
                 </Pie>
-                <Legend verticalAlign="bottom" height={36} />
+                <Tooltip />
               </PieChart>
-              <div>
-                <p>
-                  Monthly SIP of ₹{monthly} for {years} years @ {rate}% will grow to
-                </p>
-                <p className="result-value">₹{futureValue}</p>
+
+              <div className="legend">
+                <div className="legend-item">
+                  <span className="legend-color red"></span> Invested
+                </div>
+                <div className="legend-item">
+                  <span className="legend-color blue"></span> Returns
+                </div>
               </div>
             </div>
+          )}
+        </div>
+
+        {futureValue && (
+          <div className="results">
+            <p className="sip-summary">
+              Monthly SIP of ₹{monthly} incremented annually <br />
+              by ₹0 for {years} years @ {rate}% will grow to <br />
+              <span className="result-value">₹{futureValue}</span>
+            </p>
 
             <div className="info-boxes">
               <div className="info red">
@@ -101,15 +117,15 @@ export default function Calculator() {
             </div>
 
             <p className="text-center">
-              Your investment has multiplied by{" "}
-              <span className="bold">
-                {(futureValue / totalInvested).toFixed(2)} times
-              </span>
+             <span>Your investment has multiplied by</span><br />
+                <span className="bold highlight">{(futureValue / totalInvested).toFixed(2)} times</span>
             </p>
+            
           </div>
         )}
       </div>
 
+      {/* RIGHT CARDS SECTION */}
       <div className="lumpsum-section">
         {[...Array(4)].map((_, idx) => (
           <div key={idx} className="card">
