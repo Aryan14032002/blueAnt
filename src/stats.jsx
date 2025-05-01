@@ -6,7 +6,7 @@ const stats = [
   { title: "Years of Exp.", value: 12 },
   { title: "Cr. of AUM", value: 700 },
   { title: "No. of Clients", value: 2600 },
-  { title: "No. of Employees", value: 50 },
+  { title: " Employees", value: 50 },
 ];
 
 function Stats() {

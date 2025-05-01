@@ -1,12 +1,12 @@
 .impact-container {
     display: flex;
-    width: 77.5%;
+    width: 90%;
     height: 400px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     font-family: sans-serif;
     position: relative; 
-    margin: 70px 135px 70px 150px;
+    margin: 70px 5rem 70px 5rem;
     border-radius: 20px;
     background-color: #f4fdfd;
 }
@@ -105,7 +105,7 @@
     font-size: 14px;
     margin-bottom: 12px;
     color: #333;
-    width: 500px; 
+    width: 620px; 
 }
 
 .title {

@@ -21,14 +21,14 @@ export default function Calculator() {
 
   useEffect(() => {
     calculateSIP();
-  }, []);
+  }, [monthly, rate, years]);
 
   const totalInvested = monthly * 12 * years;
   const wealthGained = futureValue ? futureValue - totalInvested : 0;
 
   const data = [
     { name: "Invested", value: totalInvested },
-    { name: "Returns", value: wealthGained }
+    { name: "Returns", value: wealthGained },
   ];
 
   const COLORS = ["#ed3237", "#00afef"];
@@ -37,7 +37,7 @@ export default function Calculator() {
     <div className="container">
       {/* LEFT SECTION */}
       <div className="calculator">
-        <h2>SIP Calculator</h2>
+        <h2>Just Check How SIP Grow Your Wealth</h2>
 
         <div className="top-section">
           <div className="inputs">
@@ -45,19 +45,19 @@ export default function Calculator() {
               type="number"
               placeholder="Monthly Investment"
               value={monthly}
-              onChange={e => setMonthly(e.target.value)}
+              onChange={(e) => setMonthly(e.target.value)}
             />
             <input
               type="number"
               placeholder="Rate of Return (%)"
               value={rate}
-              onChange={e => setRate(e.target.value)}
+              onChange={(e) => setRate(e.target.value)}
             />
             <input
               type="number"
               placeholder="Investment Period (Years)"
               value={years}
-              onChange={e => setYears(e.target.value)}
+              onChange={(e) => setYears(e.target.value)}
             />
 
             <button className="button" onClick={calculateSIP}>
@@ -67,12 +67,12 @@ export default function Calculator() {
 
           {futureValue && (
             <div className="chart-block">
-              <PieChart width={160} height={160}>
+              <PieChart width={280} height={260}>
                 <Pie
                   data={data}
                   dataKey="value"
-                  innerRadius={45}
-                  outerRadius={80}
+                  innerRadius={50}
+                  outerRadius={100}
                   paddingAngle={1}
                 >
                   {data.map((entry, index) => (
@@ -82,7 +82,7 @@ export default function Calculator() {
                     />
                   ))}
                 </Pie>
-                <Tooltip />
+                <Tooltip formatter={(value) => `₹${value}`} />
               </PieChart>
 
               <div className="legend">
@@ -117,24 +117,54 @@ export default function Calculator() {
             </div>
 
             <p className="text-center">
-             <span>Your investment has multiplied by</span><br />
-                <span className="bold highlight">{(futureValue / totalInvested).toFixed(2)} times</span>
+              <span>Your investment has multiplied by</span>
+              <br />
+              <span className="bold highlight">
+                {(futureValue / totalInvested).toFixed(2)} times
+              </span>
             </p>
-            
           </div>
         )}
       </div>
 
       {/* RIGHT CARDS SECTION */}
       <div className="lumpsum-section">
-        {[...Array(4)].map((_, idx) => (
+        {[
+          {
+            title: "Loan",
+            description: "Calculate your loan payments and interest",
+            image: "/loan-1.png",
+          },
+          {
+            title: "Lumpsum",
+            description: "Calculate the future value of a lumpsum investment",
+            image: "/lumpsum.png",
+          },
+          {
+            title: "Income Tax",
+            description: "Calculate your income tax liability",
+            image: "/tax.png",
+          },
+          {
+            title: "Retirement Corpus",
+            description: "Plan your retirement savings and corpus",
+            image: "/retirment.png",
+          },
+          
+        ].map((card, idx) => (
           <div key={idx} className="card">
             <div>
-              <h4>Lumpsum</h4>
-              <p>Calculate the future value of a lumpsum investment</p>
+              <h4>{card.title}</h4>
+              <p>{card.description}</p>
               <button className="card-button">CALCULATE</button>
             </div>
-            <div className="card-icon">💸</div>
+            <div className="card-icon">
+              <img
+                src={card.image}
+                alt={card.title}
+                className="card-icon-img"
+              />
+            </div>
           </div>
         ))}
       </div>

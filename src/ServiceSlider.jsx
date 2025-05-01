@@ -26,7 +26,7 @@ const ServiceSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 10000);
+    }, 100000);
     return () => clearInterval(interval);
   }, []);
 

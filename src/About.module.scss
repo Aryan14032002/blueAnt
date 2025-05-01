@@ -1,12 +1,12 @@
 .about {
   font-family: "Times New Roman", Times, serif;
-  height: 620px;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   box-sizing: border-box;
-  padding: 40px 150px;
+  padding: 40px 0rem 40px 3rem;
   align-items: flex-start;
   background-color: #ffffff;
 
@@ -22,6 +22,8 @@
       background-color: #f4fdfd;
       height:100%;
       border-radius: 15px;
+      // margin-left: 50px;
+      padding-left: 30px;
       
 
       .title {
@@ -33,7 +35,7 @@
         padding: 5px 35px;
         margin-top: 30px;
         margin-bottom: 15px;
-        margin-left: 30px;
+        margin-left: 0px;
         background-color: #ffffff; // Uncommented and set to white
         border-radius: 25px;
         color: rgb(226, 15, 15);
@@ -48,7 +50,7 @@
         flex-direction: column;
         gap: 10px;
         font-size: 20px;
-        margin: 20px 30px;
+        margin: 20px 0px;
         text-align: justify;
 
         p {
@@ -76,26 +78,29 @@
     }
 
     .right {
-      width: 40%;
+      width: auto;
       display: flex;
       justify-content: center;
       align-items: flex-end;
       position: relative;
       background-color: #f4fdfd;
       border-radius: 15px;
+      overflow: hidden;     // new line — ensures internal content doesn't overflow
+    }
+    
 
       .aboutImage {
-        width: 80%;
+        width: 80%;         // avoid 100% to fix subpixel line
+        height: 80%;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
         position: relative;
-        height: 80%;
-        margin-bottom: 60px;
-      }
+        overflow: hidden;      // force hide any overflow
+        border-radius: 15px;   // match parent to avoid edge bleeding
+      }      
     }
   }
-  
-}
 
 @keyframes float {
   0% {
@@ -130,13 +135,13 @@
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  width: 43vw;
+  width: 44vw;
   font-size: 34px;
   /* background-color: grey; */
   line-height: 38px;
   align-items: baseline;
   font-weight: bold;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .logo {

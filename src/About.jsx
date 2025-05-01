@@ -10,17 +10,16 @@ function About() {
 
           <div className={styles.tagline}>
             <img src="blueAnt.png" alt="Blueant Logo" className={styles.logo} />
-            <span>A Name Rooted in</span>
-            <span> Purpose and Progress</span>
+            <span>A Name Rooted in Purpose</span>
+            <span> and Progress</span>
           </div>
 
           <div className={styles.info}>
             <p>
-              <span className={styles.blue}>"BLUe"</span>stands for strength, honesty, and trust.
+              <span className={styles.blue}>"BLUe"</span>A color known for its trust, credibility, calmness, and professionalism.
             </p>
             <p>
-              <span className={styles.ant}>"Ant"</span> stands for focus, unity,
-              and tireless dedication.
+              <span className={styles.ant}>"Ant"</span>A creature known for its discipline, persistence, and teamwork.
             </p>
             <p>
               Just like Ants build mighty colonies with one grain at a time, you
@@ -28,7 +27,7 @@ function About() {
             </p>
             <p>Let<span className={styles.ants}> Blueant</span> will navigate you through the journey of building wealth.</p>
             <button className="read-more-btn">
-            Read More <span>➜</span>
+            Read More 
           </button>
           </div>
         </div>

@@ -7,7 +7,7 @@ const stories = [
         id: 1,
         name: 'Sneha Jain',
         title: 'TEAM LEADER',
-        quote: 'Pete Graham is among the outstanding members of my team. He can work under pressure and easily adapt to change. I hope he grows and continues to thrive in his new endeavor.',
+        quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: '/WhatsApp Image 2025-04-24 at 11.27.31_fad931d2.jpg'
     },
     {

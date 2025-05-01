@@ -1,245 +1,254 @@
 /* Overall Container */
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 70px 135px 70px 150px;
-    background-color: #ffffff;
-    min-height: 100vh;
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  }
-  
-  /* Left Calculator Section */
-  .calculator {
-    background-color: #fff5f5;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex: 2;
-    height: 650px;
-  }
-  
-  .calculator h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Top Section: Inputs + Chart Side-by-Side */
-  .top-section {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 40px 0px 40px 0px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
     align-items: flex-start;
   }
-  
-  /* Inputs Column */
-  .inputs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .inputs input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #f2eeed;
-    color: #444;
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Calculate Button */
-  .button {
-    background-color: #e53935;
-    color: white;
-    font-size: 1rem;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 0.5rem;
-    width: fit-content;
-  }
-  
-  .button:hover {
-    background-color: #c62828;
-  }
-  
-  /* Chart Block */
-  .chart-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Result Summary */
-  .sip-summary {
-    text-align: center;
-    margin: 20px 0 20px;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 500;
-  }
-  
-  .result-value {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #000;
-    margin-top: 0.5rem;
-  }
-  
-  /* Info Boxes Row */
-  .info-boxes {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .info {
-    flex: 1;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .info.red {
-    background-color: #ffe0e0;
-    color: #c62828;
-  }
-  
-  .info.blue {
-    background-color: #e3f2fd;
-    color: #1565c0;
-  }
-  
-  .info-value {
-    font-size: 1.1rem;
-    margin-top: 0.25rem;
-  }
-  
-  /* Final Line */
-  .text-center {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  /* Right Section: Cards */
-  .lumpsum-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .card {
-    background-color: #e6f7ff;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 157px;
-  }
-  
-  .card h4 {
-    margin: 0 0 0.25rem;
-    font-size: 1.1rem;
-  }
-  
-  .card p {
-    font-size: 0.95rem;
-    color: #444;
-    margin: 0.25rem 0;
-  }
-  
-  .card-button {
-    background-color: #00aaff;
-    color: white;
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
-    border: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    margin-top: 0.5rem;
-  }
-  
-  .card-button:hover {
-    background-color: #008ecc;
-  }
-  
-  .card-icon {
-    font-size: 2rem;
-    color: #e53935;
-  }
-  .legend {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-  }
-  
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: #333;
-  }
-  
-  .legend-color {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .legend-color.red {
-    background-color: #e53935;
-  }
-  
-  .legend-color.blue {
-    background-color: #42a5f5;
-  }
-  .sip-summary {
-    font-size: 16px;
-    line-height: 1.8; /* Increased line spacing */
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .result-value {
-    font-size: 22px;     /* Bigger font */
-    font-weight: bold;   /* Bold */
-    color: #2e7d32;      /* Optional: green to highlight */
-    margin-top: 0px;
-  }
-  .text-center {
-    text-align: center;
-    margin-top: 1rem;
-    line-height: 1.6;
-  }
-  
-  .bold.highlight {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2e7d32; /* Optional green shade for emphasis */
-  }
-  
+}
+
+/* Left Calculator Section */
+.calculator {
+  background-color: #fff5f5;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1.8;
+  height: 705px;
+}
+
+.calculator h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Top Section: Inputs + Chart Side-by-Side */
+.top-section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Inputs Column */
+.inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f2eeed;
+  color: #444;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+}
+.button {
+  background-color: #e53935;
+  color: white;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: #c62828;
+}
+
+/* Chart Block */
+.chart-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: -50px;
+  position: relative;
+}
+
+/* Result Summary */
+.sip-summary {
+  text-align: center;
+  margin: 20px 0 30px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.result-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: 0.5rem;
+}
+
+/* Info Boxes Row */
+.info-boxes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.info.red {
+  background-color: #ffe0e0;
+  color: #c62828;
+}
+
+.info.blue {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+.lumpsum-section {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card {
+  background-color: #e6f7ff;
+  padding: 1.5rem 4.5rem 1.5rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 170px;
+  width: 100%;
+}
+
+.card h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.25rem 0;
+}
+
+.card-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.card-button:hover {
+  background-color: #008ecc;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0rem;
+  font-size: 0.9rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #333;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-color.red {
+  background-color: #e53935;
+}
+
+.legend-color.blue {
+  background-color: #42a5f5;
+}
+
+.sip-summary {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.result-value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-top: 0px;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.bold.highlight {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2e7d32;
+}

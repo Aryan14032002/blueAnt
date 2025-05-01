@@ -18,8 +18,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 94px 0px 115px;
+    // max-width: 1200px;
+    // margin: 0 94px 0px 115px;
     animation: levitate 2s ease-in-out infinite;  // Optional: Add levitating animation to the wrapper
   }
   
@@ -52,14 +52,14 @@
   }
   
   .statCard h3 {
-    font-size: 1.8rem;  // 🔹 Smaller font size
+    font-size: 2.0rem;  // 🔹 Smaller font size
     margin: 0;
     color: #00afef;
     font-weight: 700;
   }
   
   .statCard p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-top: 6px;
     font-weight: 600;
     color: #000000;

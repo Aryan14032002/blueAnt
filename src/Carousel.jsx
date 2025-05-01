@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import styles from './Carousel.module.scss';
-import { Navigation, Autoplay } from 'swiper/modules';
 
 function Carousel() {
   return (
@@ -22,17 +21,17 @@ function Carousel() {
       >
         <SwiperSlide>
           <div className={styles.slide}>
-            <img src="slide1.jpg" alt="Slide 1" />
+            <img src="/slide1.jpg" alt="Slide 1" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.slide}>
-            <img src="slide2.jpg" alt="Slide 2" />
+            <img src="/slide2.jpg" alt="Slide 2" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.slide}>
-            <img src="slide3.jpg" alt="Slide 3" />
+            <img src="/slide3.jpg" alt="Slide 3" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -41,7 +40,8 @@ function Carousel() {
           </div>
         </SwiperSlide>
       </Swiper>
-      {/* Navigation Arrows with images from the public folder */}
+
+      {/* Custom Navigation Arrows */}
       <div className={styles.prev}>
         <img src="/left button.png" alt="Previous" />
       </div>

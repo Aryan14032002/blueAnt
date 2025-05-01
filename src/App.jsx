@@ -6,9 +6,9 @@ import About from "./About";
 import Stats from "./stats";
 
 import ServiceSlider from "./ServiceSlider";
-import Blog from "./blog";
-import Calculator from "./Calculator";
 import Mobile from "./mobile";
+import Calculator from "./Calculator";
+import Blog from "./blog";
 import Gallery from "./gllery";
 import Youtube from "./youtube";
 import ImpactStories from "./ImpactStories";
@@ -25,9 +25,9 @@ function App() {
       <About />
       <Stats />
       <ServiceSlider />
-      <Blog />
-      <Calculator />
       <Mobile />
+      <Calculator />
+      <Blog />
       <Gallery />
       <Youtube />
       <ImpactStories />

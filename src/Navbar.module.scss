@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 12vh;
@@ -11,7 +11,14 @@
   z-index: 999;
   background-color: #f4f0f0;
   opacity: 0.7;
+  transition: opacity 0.4s ease, background-color 0.4s ease;
 
+  &.scrolled {
+    opacity: 1;
+  }
+
+
+  
   .logo {
     height: 60%;
     position: relative;
@@ -223,5 +230,122 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+/* Tablet & below */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 10vh;
+    padding: 0 4vw;
+
+    .logo {
+      height: 50%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .menuWrapper {
+      flex-direction: row;
+      gap: 10px;
+
+      .contactIcons {
+        gap: 12px;
+        margin-right: 5px;
+
+        p {
+          display: none; // Hide number on smaller screens
+        }
+
+        .iconLink {
+          width: 30px;
+          height: 30px;
+
+          .iconImage {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+
+      .menuContainer {
+        .menuButton {
+          font-size: 16px;
+          padding: 0px 12px;
+
+          .menuIcon {
+            height: 10px;
+            width: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            span {
+              height: 2px;
+            }
+          }
+        }
+
+        .dropdown {
+          min-width: 140px;
+          right: 0;
+
+          li {
+            font-size: 14px;
+            padding: 4px 6px;
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 9vh;
+    padding: 0 3vw;
+
+    .logo {
+      height: 40%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .menuWrapper {
+      .contactIcons {
+        gap: 8px;
+
+        .iconLink {
+          width: 26px;
+          height: 26px;
+
+          .iconImage {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .menuContainer {
+        .menuButton {
+          font-size: 14px;
+          gap: 4px;
+        }
+
+        .dropdown {
+          min-width: 120px;
+          right: -5px;
+
+          li {
+            font-size: 13px;
+            padding: 3px 5px;
+          }
+        }
+      }
+    }
   }
 }
