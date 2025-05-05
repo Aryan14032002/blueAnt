@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.scss";
+import { Link } from "react-router-dom"; // ✅ Added
 
 function About() {
   return (
@@ -16,37 +17,40 @@ function About() {
 
           <div className={styles.info}>
             <p>
-              <span className={styles.blue}>"BLUe"</span>A color known for its trust, credibility, calmness, and professionalism.
+              <span className={styles.blue}>"BLUe"</span> A color known for its trust, credibility, calmness, and professionalism.
             </p>
             <p>
-              <span className={styles.ant}>"Ant"</span>A creature known for its discipline, persistence, and teamwork.
+              <span className={styles.ant}>"Ant"</span> A creature known for its discipline, persistence, and teamwork.
             </p>
             <p>
-              Just like Ants build mighty colonies with one grain at a time, you
-              too can create your Financial Empire by taking small and smart steps with the help of Blueant.
+              Just like Ants build mighty colonies with one grain at a time, you too can create your Financial Empire by taking small and smart steps with the help of Blueant.
             </p>
-            <p>Let<span className={styles.ants}> Blueant</span> will navigate you through the journey of building wealth.</p>
-            <button className="read-more-btn">
-            Read More 
-          </button>
+            <p>
+              Let <span className={styles.ants}>Blueant</span> navigate you through the journey of building wealth.
+            </p>
+
+            {/* ✅ Link to full About Page */}
+            <Link to="/about">
+              <button className="read-more-btn">Read More</button>
+            </Link>
           </div>
         </div>
 
         <div className={styles.right}>
-        <div className={styles.aboutImage}>
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline 
-          width="100%" 
-          height="auto"
-          className={styles.video}
-    >
-      <source src="/Video 2.mp4" type="video/mp4" />
-    </video>
-  </div>
-</div>
+          <div className={styles.aboutImage}>
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              width="100%" 
+              height="auto"
+              className={styles.video}
+            >
+              <source src="/Video 2.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   );

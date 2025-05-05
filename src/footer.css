@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     background: url('/footer.jpg') center center / cover no-repeat;
-    filter: brightness(40%);
+    filter: brightness(35%);
     z-index: -1;
   }
   

@@ -1,41 +1,34 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import Carousel from "./Carousel";
 import About from "./About";
-import Stats from "./stats";
-
+import Stats from "./Stats";
 import ServiceSlider from "./ServiceSlider";
-import Mobile from "./mobile";
+import Mobile from "./Mobile";
 import Calculator from "./Calculator";
-import Blog from "./blog";
-import Gallery from "./gllery";
-import Youtube from "./youtube";
+import Blog from "./Blog";
+import Gallery from "./Gallery";
+import Youtube from "./Youtube";
 import ImpactStories from "./ImpactStories";
-// import Calculator from "./Calculator"; 
-
-import Footer from "./footer";
+import Footer from "./Footer";
+import AboutPage from "./aboutpage"; // Import the AboutPage component
+import Landing from "./Landing";
+import ServicePage from "./ServicePage";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
-    <>
-      {/* <Router> */}
+    <Router>
+      <ScrollToTop />
       <Navbar />
-      <Carousel />
-      <About />
-      <Stats />
-      <ServiceSlider />
-      <Mobile />
-      <Calculator />
-      <Blog />
-      <Gallery />
-      <Youtube />
-      <ImpactStories />
-      {/* <Footer /> */}
-      {/* <Calculator /> */}
+      <Routes>
+        <Route path="/about" element={<AboutPage />} /> 
+        <Route path="/service" element={<ServicePage />} /> 
+        <Route path="/" element={<Landing />} />
+      </Routes>
       <Footer />
-      {/* </Router> */}
-    </>
+    </Router>
   );
 }
 

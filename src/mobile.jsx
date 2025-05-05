@@ -5,12 +5,12 @@ function Mobile() {
   return (
     <div className="mobile-strip">
       {/* Floating Bubbles */}
-      <div className="bubble bubble1"></div>
-      <div className="bubble bubble2"></div>
-      <div className="bubble bubble3"></div>
-      <div className="bubble bubble4"></div>
-      <div className="bubble bubble5"></div>
-      <div className="bubble bubble6"></div>
+      <div className="bubbble bubble16"></div>
+      <div className="bubbble bubble15"></div>
+      <div className="bubbble bubble14"></div>
+      <div className="bubbble bubble13"></div>
+      <div className="bubbble bubble12"></div>
+      <div className="bubbble bubble11"></div>
 
       {/* Left side: text and download buttons */}
       <div className="mobile-text">
