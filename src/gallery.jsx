@@ -1,5 +1,6 @@
 import React from "react";
 import "./gallery.css";
+import { Link } from "react-router-dom"; // ✅ Added
 
 const images = [
   "workshop-4.jpg",  // Big
@@ -29,9 +30,10 @@ const Gallery = () => {
             <h1>GALLERY</h1>
             <p className="tagline">Workshop Your Way to Wow</p>
           </div>
+          <Link to="/gallery">
           <button className="view-all-btn">View All </button>
+          </Link>
         </div>
-
         {/* EXACTLY your original gallery rows below - no changes */}
         <div className="gallery-row">
           <div className="img-box img-big" style={{ backgroundImage: `url(${images[0]})` }}>

@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: flex-start;
     box-sizing: border-box;
-    padding: 70px 80px;
+    padding: 70px 50px;
     align-items: center; /* Use center to center content */
     background-color: #ffffff;
     position: relative;
@@ -15,7 +15,7 @@
 .service-label {
     position: absolute;
     top: 30px;
-    left: 0px; /* aligns with padding-left of .slider-wrapper */
+    left: 30px; /* aligns with padding-left of .slider-wrapper */
     font-family: "Outfit", sans-serif;
     font-weight: 500;
     font-size: 13px;
@@ -117,12 +117,12 @@
 }
 
 .arrow.left {
-    left: -60px;
+    left: 16px;
     margin-top: 0px;
 }
 
 .arrow.right {
-    right: -60px;
+    right: 16px;
     margin-top: 0px;
 }
 

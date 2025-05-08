@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import styles from "./stats.module.scss";
 
-const Stats = [
+const stats = [
   { title: "Years of Exp.", value: 12 },
   { title: "Cr. of AUM", value: 700 },
   { title: "No. of Clients", value: 2600 },

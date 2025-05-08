@@ -43,12 +43,12 @@ function Navbar() {
             <Link style={{textDecoration:"none"}} to={"./"}><li>HOME</li></Link>
             <Link style={{textDecoration:"none"}} to={"./about"}><li>ABOUT</li></Link>
             <Link style={{textDecoration:"none"}} to={"./service"}><li>SERVICES</li></Link>
-            <Link style={{textDecoration:"none"}} to={"./"}><li>WORKSHOP</li></Link>
+            <Link style={{textDecoration:"none"}} to={"./gallery"}><li>GALLERY</li></Link>
             <Link style={{textDecoration:"none"}} to={"./"}><li>CALCULATORS</li></Link>
             <Link style={{textDecoration:"none"}} to={"./"}><li>BLOG</li></Link>
             <a href="https://blueantindia.investwell.app/app/#/login" style={{textDecoration:"none"}}><li>PORTFOLIO</li></a>
             <a href="https://newtrade.sharekhan.com/" style={{textDecoration:"none"}}><li >STOCK </li></a>
-            <Link style={{textDecoration:"none"}} to={"./"}><li>CONTACT</li></Link>
+            <Link style={{textDecoration:"none"}} to={"./contact"}><li>CONTACT</li></Link>
           </ul>
         </div>
       </div>
