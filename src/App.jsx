@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import Footer from "./footer";
-import AboutPage from "./Aboutpage"; // Import the AboutPage component
+import AboutPage from "./aboutpage"; // Import the AboutPage component
 import Landing from "./Landing";
 import ServicePage from "./ServicePage";
 import ScrollToTop from "./ScrollToTop";
